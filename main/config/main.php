@@ -7,10 +7,10 @@ $params = array_merge(
 );
 
 return [
-    'id' => 'app-frontend',
+    'id' => 'app-main',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
-    'controllerNamespace' => 'frontend\controllers',
+    'controllerNamespace' => 'main\controllers',
     'components' => [
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,

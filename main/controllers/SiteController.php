@@ -1,5 +1,5 @@
 <?php
-namespace frontend\controllers;
+namespace main\controllers;
 
 use yii\web\Controller;
 use yii\web\ErrorAction;
