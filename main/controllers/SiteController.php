@@ -5,14 +5,11 @@ use yii\web\Controller;
 use yii\web\ErrorAction;
 
 /**
- * Site controller
+ * Site controller.
  */
 class SiteController extends Controller
 {
-
-    /**
-     * @inheritdoc
-     */
+    /** @inheritdoc */
     public function actions()
     {
         return [
@@ -23,7 +20,7 @@ class SiteController extends Controller
     }
 
     /**
-     * Displays homepage.
+     * Displays index page.
      *
      * @return mixed
      */
