@@ -1,3 +1,8 @@
+/**
+ * Performs HTTP request and shows result in Bootstrap modal dialog.
+ *
+ * @param {string} url HTTP request URL
+ */
 function request(url) {
     var result = '',
         $indicator = $('#indicator'),
@@ -24,6 +29,9 @@ function request(url) {
     });
 }
 
+/**
+ * onready callback.
+ */
 $(function () {
     $('#request-form').on('submit', function (e) {
         e.preventDefault();
