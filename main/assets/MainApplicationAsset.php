@@ -2,12 +2,13 @@
 
 namespace main\assets;
 
+use yii\bootstrap\BootstrapPluginAsset;
 use yii\web\AssetBundle;
 
 /**
  * Main application asset bundle.
  */
-class AppAsset extends AssetBundle
+class MainApplicationAsset extends AssetBundle
 {
     /** @inheritdoc */
     public $basePath = '@webroot';
@@ -15,9 +16,11 @@ class AppAsset extends AssetBundle
     /** @inheritdoc */
     public $baseUrl = '@web';
 
+    /** @vinheritdoc */
+    public $js = ['js/main.js'];
+
     /** @inheritdoc */
     public $depends = [
-        '\yii\web\JqueryAsset',
-        '\yii\bootstrap\BootstrapAsset',
+        BootstrapPluginAsset::class
     ];
 }
