@@ -1,4 +1,5 @@
 <?php
+
 namespace main\controllers;
 
 use yii\web\Controller;
@@ -26,6 +27,7 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
+        die('123');
         return $this->render('index');
     }
 }

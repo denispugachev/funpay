@@ -17,7 +17,9 @@ class MainApplicationAsset extends AssetBundle
     public $baseUrl = '@web';
 
     /** @vinheritdoc */
-    public $js = ['js/main.js'];
+    public $js = [
+        'js/main.js'
+    ];
 
     /** @inheritdoc */
     public $depends = [
