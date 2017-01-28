@@ -1,9 +1,10 @@
 /**
  * Performs HTTP request and shows result in Bootstrap modal dialog.
  *
- * @param {string} url HTTP request URL
+ * @param {string} action
+ * @param {string} text
  */
-function request(url) {
+function request(action, text) {
     var result = '',
         $indicator = $('#indicator'),
         $result = $('#result');
@@ -14,17 +15,22 @@ function request(url) {
     $('#modal').modal();
 
     $.ajax({
-        url: url,
-        dataType: 'text',
+        url: action,
+        type: 'post',
+        data: {
+            text: text
+        },
         success: function (data) {
-            result = data;
+            result = 'Wallet: ' + data.wallet + '<br>';
+            result += 'Code: ' + data.code + '<br>';
+            result += 'Sum: ' + data.sum;
         },
         error: function (error) {
             result = 'Error occured: ' + error.statusText;
         },
         complete: function () {
             $indicator.hide();
-            $result.text(result);
+            $result.html(result);
         }
     });
 }
@@ -35,10 +41,10 @@ function request(url) {
 $(function () {
     $('#request-form').on('submit', function (e) {
         e.preventDefault();
-        var url = $('#url').val();
+        var text = $('#text').val();
 
-        if (url) {
-            request(url);
+        if (text) {
+            request($(this).attr('action'), text);
         }
     });
 });

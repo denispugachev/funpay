@@ -1,5 +1,7 @@
 <?php
 
+use yii\helpers\Url;
+
 /** @var \yii\web\View $this */
 
 $this->title = 'Test application page';
@@ -8,13 +10,13 @@ $this->title = 'Test application page';
     <div class="row">
         <div class="col-sm-4"></div>
         <div class="col-sm-4">
-            <h2>Function test</h2>
-            <form id="request-form">
+            <h2>SMS message test</h2>
+            <form id="request-form" action="<?= Url::to(['api/parse']); ?>" method="post">
                 <div class="form-group">
-                    <label for="url">URL:</label>
-                    <input type="text" class="form-control" id="url" autocomplete="off">
+                    <label for="text">SMS message text:</label>
+                    <textarea class="form-control" rows="5" id="text"></textarea>
                 </div>
-                <button type="submit" class="btn btn-default">Request</button>
+                <button type="submit" class="btn btn-default">Parse</button>
             </form>
         </div>
         <div class="col-sm-4"></div>
