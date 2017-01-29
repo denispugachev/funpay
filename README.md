@@ -7,23 +7,25 @@ Simple SMS message text parsing application. Made using [Yii2 advanced app templ
 1. Install virtualbox and vagrant.
 2. Prepare project:
 
-    
+    ```bash
     git clone https://github.com/denispugachev/funpay.git
     cd funpay/vagrant/config
     cp vagrant-local.example.yml vagrant-local.yml
+    ```
     
 3. Place your GitHub personal API token to vagrant-local.yml 
 4. Change directory to project root:
 
-    
+    ```bash
     cd yii2-app-advanced
-    
+    ```
     
 5. Run commands:
    
-    
+    ```bash
     vagrant plugin install vagrant-hostmanager
     vagrant up
+    ```
     
 After that you can access application by URL [http://funpay.dev](http://funpay.dev).
 
